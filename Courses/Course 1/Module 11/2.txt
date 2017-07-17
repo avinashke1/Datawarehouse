@@ -1,0 +1,23 @@
+FDs-
+-	PatNo -> PatAge, PatZip9
+-	PatZip9 -> PatCity
+-	VisitNo -> PatNo, VisitDate
+-	ProvNo -> ProvSpecialty, ProvEmail
+-	ProvNo,VisitNo -> Diagnosis 
+
+BCNF Tables-
+
+Table 1(PatNo, PatAge, PatZip9)
+	FOREIGN KEY(PatZip9) REFERENCES Table1-1
+
+Table 1.1(PatZip9, PatCity)
+
+Table 2(VisitNo, PatNo, VisitDate)
+	FOREIGN KEY(PatNo) REFERENCES Table 1
+
+Table 3(ProvNo, ProvSpecialty, ProvEmail)
+	UNIQUE(ProvEmail)
+
+Table 4(ProvNo, VisitNo, Diagnosis)
+	FOREIGN KEY (ProvNo) REFERENCES Table 3
+	FOREIGN KEY(VisitNo) REFERENCES Table 2

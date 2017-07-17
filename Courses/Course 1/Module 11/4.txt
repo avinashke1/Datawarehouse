@@ -1,0 +1,12 @@
+LHS-
+
+OrdNo -> CustNo (None)
+OrdNo -> CustBal (None)
+OrdNo -> CustDisc (None)
+OrdNo -> OrdDate (None)
+
+RHS-
+
+OrdNo -> ItemNo (1,2),(3,4)
+OrdNo -> QtyOrd (3,4)
+OrdNo -> ItemPrice (1,2),(3,4)

@@ -1,0 +1,15 @@
+--Rule: Applications of the Identifying Relationship Rule--
+--Changes: The Primary Key of DisburseLine is the combination of LoanNo and DateSent --
+
+
+Student (StdNo, StdName, StdAddress, StdCity, StdState, StdZip, StdEmail)
+
+Institution (InstID, InstName, InstMascot)
+
+Loan (LoanNo, ProcDate, DisbMethod, DisbBank, DateAuth, NoteValue, Subsidized, Rate, StdNo, InstID, LenderNo) FOREIGN KEY(StdNo) REFERENCE Student FOREIGN KEY(InstID) REFERENCE Institution FOREIGN KEY(LenderNo) REFERENCE Lender StdNo NOT NULL InstID NOT NULL LenderNo NOT NULL
+
+Lender (LenderNo, LendName)
+
+DisburseLine (LoanNo, DateSent, Amount, OriFee, GuarFee) FOREIGN KEY(LoanNo) REFERENCE Loan LoanNo NOT NULL
+
+

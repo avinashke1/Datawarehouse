@@ -1,0 +1,14 @@
+Student (StdNo, StdName, StdEmail, StdAddress, StdCity, StdState, StdZip )
+	UNIQUE(StdEmail)
+
+Reason: In the Student table, StdEmail is unique, violate BCNF
+
+Lender(LenderNo, LenderName)
+	UNIQUE(LenderName)
+
+Reason: In the Lender table, LenderName is unique
+
+Institution(InstNo, InstName, InstMascot)
+	UNIQUE(InstName)
+
+Reason:  In the Institution table, InstName is unique,  violate BCNF

@@ -1,0 +1,4 @@
+--Rule: Entity Type Rule,1-M Relationship Rule--
+
+
+Account (Acctid, AcctName, Balance) FOREIGN KEY(Acctid) REFERENCES Account

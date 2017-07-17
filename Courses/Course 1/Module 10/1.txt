@@ -1,0 +1,11 @@
+--Rule: Entity rule--
+
+Student (StdNo, StdName, StdAddress, StdCity, StdState, StdZip, StdEmail)
+
+Institution (InstID, InstName, InstMascot)
+
+Loan (LoanNo, ProcDate, DisbMethod, DisbBank, DateAuth, NoteValue, Subsidized, Rate)
+
+Lender (LenderNo, LendName)
+
+DisburseLine (DateSent, Amount, OriFee, GuarFee)

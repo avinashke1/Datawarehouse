@@ -1,0 +1,11 @@
+Insertion Anomalies:
+
+It’s necessary to know VisitNo and ProvNo because primary key is the combination of these two.
+
+Update Aomalies:
+
+If we change ProvSpeciality where ProvNo is D2, two row have to be changed.
+
+Delete Anomalies:
+
+If we just delete the provider of D2, we’ll lose information of visit V10021.

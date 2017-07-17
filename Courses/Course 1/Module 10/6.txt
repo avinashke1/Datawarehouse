@@ -1,0 +1,8 @@
+--Rule: Entity Type Rule,M-N Relationship Rule--
+
+
+Owner (OwnId, OwnName, OwnPhone)
+
+Property (PropId, BldgName, UnitNo, Bdrms)
+
+Shares (OwnId, PropId, StartWeek) FOREIGN KEY(OwnID) REFERENCES Owner FOREIGN KEY(PropID) REFERENCES Property
